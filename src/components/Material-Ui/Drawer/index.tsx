@@ -20,6 +20,8 @@ import { Grid } from '@mui/material';
 
 import Avatars from '../Avatar';
 
+import style from './style';
+
 const drawerWidth = 80;
 
 type DrawerProps = {
@@ -70,7 +72,7 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
               lg={4}
               xl={4}
             >
-              <Typography variant="h6" noWrap component="div" sx={{ color: '#7a7a7a' }}>
+              <Typography variant="h6" noWrap component="div" sx={style.pageName}>
                 {pageName()}
               </Typography>
             </Grid>
@@ -83,9 +85,7 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
               lg={8}
               xl={8}
             >
-              <Typography sx={{ marginRight: 1, marginTop: 1, color: '#7a7a7a' }}>
-                Olá, Klynsman Guedes
-              </Typography>
+              <Typography sx={style.userName}>Olá, Klynsman Guedes</Typography>
               <Avatars />
             </Grid>
           </Grid>
@@ -110,14 +110,7 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
         anchor="left"
       >
         <Toolbar sx={{ background: '#21222d' }} />
-        <div
-          style={{
-            backgroundColor: '#21222d',
-            height: '100vh',
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
+        <div style={style.listNav}>
           <List>
             <NavLink to="/">
               <ListItem disablePadding sx={{ display: 'block' }}>
@@ -127,15 +120,8 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
                     px: 2.5,
                   }}
                 >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      // mr: open ? 3 : 'auto',
-                      mr: 'auto',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <MonitorOutlinedIcon sx={{ color: '#b2f35f' }} />
+                  <ListItemIcon sx={style.listIcon}>
+                    <MonitorOutlinedIcon sx={style.icon} />
                   </ListItemIcon>
                   <ListItemText />
                 </ListItemButton>
@@ -149,15 +135,8 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
                     px: 2.5,
                   }}
                 >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      // mr: open ? 3 : 'auto',
-                      mr: 'auto',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <MoneyOffCsredOutlinedIcon sx={{ color: '#b2f35f' }} />
+                  <ListItemIcon sx={style.listIcon}>
+                    <MoneyOffCsredOutlinedIcon sx={style.icon} />
                   </ListItemIcon>
                   <ListItemText />
                 </ListItemButton>
