@@ -145,7 +145,7 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
           </List>
         </div>
       </Drawer>
-      <Box component="main" sx={{ marginTop: 5 }}>
+      <Box component="main" sx={{ marginTop: 6, width: '100%' }}>
         {/* <Toolbar /> */}
         {children}
       </Box>
