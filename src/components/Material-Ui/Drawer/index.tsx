@@ -70,7 +70,7 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
               lg={4}
               xl={4}
             >
-              <Typography variant="h6" noWrap component="div">
+              <Typography variant="h6" noWrap component="div" sx={{ color: '#7a7a7a' }}>
                 {pageName()}
               </Typography>
             </Grid>
@@ -83,7 +83,9 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
               lg={8}
               xl={8}
             >
-              <Typography sx={{ marginRight: 1, marginTop: 1 }}>Olá, Klynsman Guedes</Typography>
+              <Typography sx={{ marginRight: 1, marginTop: 1, color: '#7a7a7a' }}>
+                Olá, Klynsman Guedes
+              </Typography>
               <Avatars />
             </Grid>
           </Grid>
@@ -133,7 +135,7 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
                       justifyContent: 'center',
                     }}
                   >
-                    <MonitorOutlinedIcon sx={{ color: '#469536' }} />
+                    <MonitorOutlinedIcon sx={{ color: '#b2f35f' }} />
                   </ListItemIcon>
                   <ListItemText />
                 </ListItemButton>
@@ -155,7 +157,7 @@ export default function PermanentDrawerLeft({ children }: DrawerProps) {
                       justifyContent: 'center',
                     }}
                   >
-                    <MoneyOffCsredOutlinedIcon sx={{ color: '#469536' }} />
+                    <MoneyOffCsredOutlinedIcon sx={{ color: '#b2f35f' }} />
                   </ListItemIcon>
                   <ListItemText />
                 </ListItemButton>
