@@ -10,7 +10,7 @@ const style = {
     fontSize: 20,
   },
   valueExit: {
-    color: '#fe0f0f',
+    color: '#ff5232',
     fontSize: 20,
   },
   valueSavings: {
