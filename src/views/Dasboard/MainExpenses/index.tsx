@@ -1,8 +1,9 @@
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import Card from '../../../components/Design/Card';
 import AreaChart from '../../../components/ApexCharts/AreaBar';
+import MainExpenses from '../../../components/ApexCharts/BarCharts/mainExpenses';
 
-export default function ExpenseIncome() {
+export default function MainExpensesView() {
   return (
     <Grid
       container
@@ -17,7 +18,7 @@ export default function ExpenseIncome() {
       sx={{ marginTop: 2 }}
     >
       <Card style={{ height: 400, padding: 1 }}>
-        <AreaChart />
+        <MainExpenses />
       </Card>
     </Grid>
   );

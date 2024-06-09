@@ -1,4 +1,5 @@
 import { ApexOptions } from 'apexcharts';
+import colors from '../../../assets/color/colors';
 import ReactApexChart from 'react-apexcharts';
 
 export default function AreaChart() {
@@ -18,6 +19,23 @@ export default function AreaChart() {
         'Novembro',
         'Dezembro',
       ],
+      labels: {
+        show: true,
+        rotate: -45,
+        rotateAlways: false,
+        hideOverlappingLabels: true,
+        showDuplicates: false,
+        trim: false,
+        minHeight: undefined,
+        maxHeight: 120,
+        style: {
+          colors: colors.secundaryText,
+          fontSize: '12px',
+          fontFamily: 'Helvetica, Arial, sans-serif',
+          fontWeight: 400,
+          cssClass: 'apexcharts-xaxis-label',
+        },
+      },
     },
     // title: {
     //   text: 'Entradas x Saídas',
@@ -48,9 +66,25 @@ export default function AreaChart() {
     legend: {
       position: 'top',
       horizontalAlign: 'left',
-      fontSize: '18px',
+      fontSize: '14px',
       // fontFamily: 'Helvetica, Arial',
       fontWeight: 400,
+      labels: {
+        colors: colors.secundaryText,
+        useSeriesColors: false,
+      },
+      markers: {
+        width: 6,
+        height: 6,
+        strokeWidth: 0,
+        strokeColor: '#fff',
+        fillColors: undefined,
+        radius: 12,
+        customHTML: undefined,
+        onClick: undefined,
+        offsetX: 0,
+        offsetY: 0,
+      },
     },
     grid: {
       borderColor: '#edf5ff',
@@ -64,6 +98,34 @@ export default function AreaChart() {
         },
       },
     },
+    yaxis: {
+      labels: {
+        show: true,
+        align: 'right',
+        minWidth: 0,
+        maxWidth: 160,
+        style: {
+          colors: [colors.secundaryText],
+          fontSize: '12px',
+          // fontFamily: 'Helvetica, Arial, sans-serif',
+          fontWeight: 400,
+          cssClass: 'apexcharts-yaxis-label',
+        },
+      },
+    },
+
+    chart: {
+      foreColor: '#373d3f',
+    },
+
+    // grid: {
+    //   row: {
+    //     colors: ['#F44336', '#E91E63', '#9C27B0']
+    //   },
+    //   column: {
+    //     colors: ['#F44336', '#E91E63', '#9C27B0']
+    //   }
+    // }
   };
 
   const series = [

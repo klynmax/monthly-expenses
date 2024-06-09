@@ -8,14 +8,26 @@ const style = {
   value: {
     color: colors.especialText,
     fontSize: 20,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 200,
   },
   valueExit: {
     color: '#ff5232',
     fontSize: 20,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 200,
   },
   valueSavings: {
     color: '#00ffff',
     fontSize: 20,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 200,
   },
 };
 

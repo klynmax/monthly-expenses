@@ -15,6 +15,7 @@ import { Grid, Typography } from '@mui/material';
 import LocalAtmOutlinedIcon from '@mui/icons-material/LocalAtmOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import TextSnippetOutlinedIcon from '@mui/icons-material/TextSnippetOutlined';
+import PaymentOutlinedIcon from '@mui/icons-material/PaymentOutlined';
 
 export default function NestedList() {
   const [open, setOpen] = React.useState(true);
@@ -153,6 +154,36 @@ export default function NestedList() {
           <Typography sx={{ fontSize: 12, textAlign: 'left', color: '#7a7a7a' }}>Ganho</Typography>
         </Grid>
         <Typography sx={{ fontSize: 12, color: '#b2f35f' }}>+R$ 1.350,00</Typography>
+      </ListItemButton>
+      <ListItemButton>
+        <ListItemIcon>
+          <div
+            style={{
+              background: 'rgba(220, 220, 220, 0.1)',
+              width: 50,
+              height: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              display: 'flex',
+              borderRadius: 10,
+            }}
+          >
+            <PaymentOutlinedIcon sx={{ color: '#7a7a7a' }} />
+          </div>
+        </ListItemIcon>
+        <Grid
+          container
+          direction="column"
+          justifyContent="flex-start"
+          alignItems="flex-start"
+          sx={{ marginLeft: 1, width: 140 }}
+        >
+          <ListItemText primary="Fatura banco x" />
+          <Typography sx={{ fontSize: 12, textAlign: 'left', color: '#7a7a7a' }}>
+            Despesa
+          </Typography>
+        </Grid>
+        <Typography sx={{ fontSize: 12, color: '#ff5232' }}>-R$1300,00</Typography>
       </ListItemButton>
     </List>
   );

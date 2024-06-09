@@ -2,6 +2,7 @@ import { Grid } from '@mui/material';
 import Overview from '../../views/Dasboard/Overview';
 import ExpenseIncome from '../../views/Dasboard/Overview-expense-income';
 import Profile from '../../views/Dasboard/Profile';
+import MainExpensesView from '../../views/Dasboard/MainExpenses';
 
 export const Dashboard: React.FC = () => {
   return (
@@ -20,13 +21,13 @@ export const Dashboard: React.FC = () => {
       <Grid item direction="row" justifyContent="flex-start" alignItems="center" lg={4} xl={3}>
         <Profile />
       </Grid>
-      <Grid item direction="row" justifyContent="flex-start" alignItems="center" lg={8} xl={8}>
+      <Grid item direction="row" justifyContent="flex-start" alignItems="center" lg xl>
         <Overview />
         <ExpenseIncome />
+        <Grid item direction="row" justifyContent="flex-start" alignItems="center" lg={12} xl={12}>
+          <MainExpensesView />
+        </Grid>
       </Grid>
-      {/* <Grid item direction="row" justifyContent="flex-start" alignItems="center" lg={4} xl={3}>
-        <Profile />
-      </Grid> */}
     </Grid>
   );
 };
